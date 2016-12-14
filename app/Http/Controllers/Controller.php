@@ -18,7 +18,7 @@ class Controller extends BaseController
         '13' => 'unauthorized user',
         '14' => 'could not create token',
         '15' => 'token not provide',
-        '21' => 'user already exists',
+        '21' => 'data already exists',
         '22' => 'e-mail or password is incorrect',
         '34' => 'sorry, that page does not exist',
         '38' => 'query parameter is missing',

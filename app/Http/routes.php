@@ -64,6 +64,15 @@ Route::resource('redirect', 'RedirectController', ['except' => [
     'create', 'edit'
 ]]);
 
+/*
+|--------------------------------------------------------------------------
+| Newsletter
+|--------------------------------------------------------------------------
+*/
+Route::resource('newsletter', 'NewsletterController', ['except' => [
+    'create', 'edit'
+]]);
+
 Route::get('r/{code}', 'RedirectController@show');
 
 Route::get('/', function () {
