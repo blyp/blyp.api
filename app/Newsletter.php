@@ -49,9 +49,6 @@ class Newsletter extends Model
     {
         $input = $request->all();
 
-        if (isset($input['name']))
-            $input['slug'] = str_slug($input['name'], "-");
-
         $newsletter = new Newsletter;
         $newsletter->fill($input);
         $newsletter->save();
@@ -82,7 +79,7 @@ class Newsletter extends Model
      */
     public function pullNewsletterEmail($email)
     {
-        $response = $this->where('slug', $email)->get();
+        $response = $this->where('email', $email)->get();
 
         return $response;
     }
@@ -114,9 +111,6 @@ class Newsletter extends Model
     {
         $input = $request->all();
 
-        if (isset($input['name']))
-            $input['slug'] = str_slug($input['name'], "-");
-        
         $newsletter = $this->find($id);
 
         if ($newsletter instanceof Newsletter) {
